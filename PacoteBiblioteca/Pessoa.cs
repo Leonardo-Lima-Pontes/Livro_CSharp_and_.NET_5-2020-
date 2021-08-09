@@ -85,5 +85,17 @@ namespace PacoteBiblioteca.Compartilhado
         {
             return Nome.CompareTo(other.Nome);
         }
+
+        public void ViagemNoTempo(DateTime when)
+        {
+            if (when <= DataDeNascenca)
+            {
+                throw new PessoaException("If you travel back in time to a date earlier than your own birth, then the universe will explode!");
+            }
+            else
+            {
+                Console.WriteLine($"Bem vindo a {when:yyyy}!");
+            }
+        }
     }
 }

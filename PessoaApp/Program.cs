@@ -82,30 +82,101 @@ namespace PessoaApp
             //    WriteLine($"Nome: {pessoa.Nome}");
             //}
 
-            var t1 = new Coisa();
-            t1.Dado = "maça";
-            WriteLine($"Coisa com um tipo inteiro {t1.Processo("maça")}");
+            //var t1 = new Coisa();
+            //t1.Dado = "maça";
+            //WriteLine($"Coisa com um tipo inteiro {t1.Processo("maça")}");
 
-            var t2 = new Coisa();
-            t2.Dado = 42;
-            WriteLine($"Coisa com um tipo inteiro {t2.Processo(42)}");
+            //var t2 = new Coisa();
+            //t2.Dado = 42;
+            //WriteLine($"Coisa com um tipo inteiro {t2.Processo(42)}");
 
-            var t3 = new CoisaGenerica<int>();
-            t3.Dado = 42;
-            WriteLine($"Coisa com um tipo inteiro {t3.Processo(42)}");
+            //var t3 = new CoisaGenerica<int>();
+            //t3.Dado = 42;
+            //WriteLine($"Coisa com um tipo inteiro {t3.Processo(42)}");
 
-            var t4 = new CoisaGenerica<string>();
-            t4.Dado = "maça";
-            WriteLine($"Coisa com um tipo inteiro {t4.Processo("maça")}");
+            //var t4 = new CoisaGenerica<string>();
+            //t4.Dado = "maça";
+            //WriteLine($"Coisa com um tipo inteiro {t4.Processo("maça")}");
+
+            //string numero1 = "4";
+
+            //WriteLine($"{numero1} ao quadrado é {MaisQuadrado.Quadrado<string>(numero1)}");
+
+            //byte numero2 = 3;
+
+            //WriteLine($"{numero2} ao quadrado é {MaisQuadrado.Quadrado<int>(numero2)}");
+
+            //var dv1 = new VetorDeslocamento(3, 5);
+            //var dv2 = new VetorDeslocamento(-2, 7);
+            //var dv3 = dv1 + dv2;
+
+            //WriteLine($"({dv1.X}, {dv1.Y} + {dv2.X}, {dv2.Y} = {dv3.X}, {dv3.Y})");
+
+            //Empregado samiraEmpregada = new Empregado
+            //{
+            //    Nome = "Samira Carolina de Oliveria",
+            //    DataDeNascenca = new DateTime(2000, 2, 12),
+            //    DataContratacao = DateTime.Now,
+            //    EmpregadoCodigo = 1
+            //};
+
+            //Pessoa samiraPessoa = samiraEmpregada;
+
+
+            //if (samiraPessoa is Empregado)
+            //{
+            //    WriteLine(samiraPessoa);
+            //    ReadKey();
+            //}
+
+            //Pessoa leonardoPessoa = new Pessoa { Nome = "Leonardo Lima Pontes", DataDeNascenca = new DateTime(1998, 8, 1) };
+
+            ////lança um erro
+            //Empregado leonardoEmpregado = (Empregado)leonardoPessoa;
+            //WriteLine(leonardoPessoa.ToString());
+            //ReadKey();
+
+            //Empregado leonardoComoEmpregado = leonardoPessoa as Empregado;
+
+            //if (leonardoComoEmpregado != null)
+            //{
+            //    WriteLine(leonardoComoEmpregado.ToString());
+            //    ReadKey();
+            //}
+
+            //samiraEmpregada.EscreverParaConsole();
+
+            //WriteLine(samiraEmpregada.ToString());
+
+            //try
+            //{
+            //    samiraEmpregada.ViagemNoTempo(new DateTime(2001, 1, 1));
+            //    samiraEmpregada.ViagemNoTempo(new DateTime(1999, 1, 1));
+            //}
+            //catch (PessoaException ex)
+            //{
+            //    WriteLine(ex.Message);
+            //}
+
+            string email0 = "leonardo@sistemasbr";
+            string email1 = "leonardo@sistemasbr.net";
+            string email2 = "leonardo";
+            string email3 = "leonardo@hotmail.com";
+
+            WriteLine($"{email0} é um email valido: {EstencaoString.ValidarEmail(email0)}");
+            WriteLine($"{email1} é um email valido: {EstencaoString.ValidarEmail(email1)}");
+            WriteLine($"{email2} é um email valido: {EstencaoString.ValidarEmail(email2)}");
+            WriteLine($"{email3} é um email valido: {email3.ValidarEmail()}"); // utilizado com método de extenção
+
         }
 
-        private static void Leonardo_Grita(object sender, EventArgs e)
-        {
-            Pessoa p = (Pessoa)sender;
-            WriteLine($"{p.Nome} está nervoso no nivel: {p.NivelAnjo} FUDEU!!!");
-        }
+        //private static void Leonardo_Grita(object sender, EventArgs e)
+        //{
+        //    Pessoa p = (Pessoa)sender;
+        //    WriteLine($"{p.Nome} está nervoso no nivel: {p.NivelAnjo} FUDEU!!!");
+        //}
 
-        delegate int DelegateParaMetodoQueEuQueroChamar(string letras);
-        
+        //delegate int DelegateParaMetodoQueEuQueroChamar(string letras);
+
     }
 }
